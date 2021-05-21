@@ -1,1 +1,1 @@
-web: gunicorn dummy_world_time.wsgi
+web: gunicorn all_purpose_backend.wsgi
