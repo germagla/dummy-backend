@@ -16,6 +16,8 @@ import dj_database_url
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+from django.contrib import staticfiles
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
@@ -78,8 +80,12 @@ WSGI_APPLICATION = 'all_purpose_backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'my_db',
+        'USER': 'hero',
+        'PASSWORD': 'my_db@123',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
@@ -118,7 +124,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-PROJECT_ROOT = os.path.join(os.path.abspath(__file__))
+# PROJECT_ROOT = os.path.join(os.path.abspath(__file__))
+PROJECT_ROOT = BASE_DIR
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 
 # Extra lookup directories for collectstatic to find static files
