@@ -15,9 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-#import dummy_world_time
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('dummy_world_time.urls')),
+    path('', include('blogs.urls')),
 ]

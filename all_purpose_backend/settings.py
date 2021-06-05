@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'dummy_world_time',
+    'blogs',
     'rest_framework',
 ]
 
