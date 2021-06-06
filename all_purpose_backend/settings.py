@@ -134,8 +134,10 @@ STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'static'),
 )
 CORS_ORIGIN_WHITELIST = [
+    '*',
     'http://localhost:3000',
     'https://germagla.github.io',
+    '154.160.2.136',
 ]
 
 
