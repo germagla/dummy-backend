@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'dummy_world_time',
     'blogs',
     'rest_framework',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
